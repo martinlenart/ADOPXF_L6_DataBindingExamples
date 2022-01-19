@@ -1,42 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DataBindingExamples.ViewModels;
+using System;
 using System.Collections.ObjectModel;
-
 using Xamarin.Forms;
-using DataBindingExamples.ViewModels;
 
 namespace DataBindingExamples.Views
 {
-	public partial class ListObservablePage : ContentPage
-	{
-		ObservableCollection<Item> items;
+    public partial class ListObservablePage : ContentPage
+    {
+        ObservableCollection<Item> items;
 
-		public ListObservablePage ()
-		{
-			InitializeComponent ();
+        public ListObservablePage()
+        {
+            InitializeComponent();
 
-            items = new ObservableCollection<Item> { 
-				new Item {Title = "First", Description="1st item"}, 
-				new Item {Title = "Second", Description="2nd item"},
-				new Item {Title = "Third", Description="3rd item"} 
-			};
+            items = new ObservableCollection<Item> {
+                new Item {Title = "First", Description="1st item"},
+                new Item {Title = "Second", Description="2nd item"},
+                new Item {Title = "Third", Description="3rd item"}
+            };
 
-			this.BindingContext = items;
+            this.BindingContext = items;
 
-		}
+        }
 
-		public async void DeleteClicked(object sender, EventArgs e) {
-			items.RemoveAt(0);
-			await DisplayAlert("Item Object", "Row deleted", "OK");
-		}
+        public async void DeleteClicked(object sender, EventArgs e)
+        {
+            items.RemoveAt(0);
+            await DisplayAlert("Item Object", "Row deleted", "OK");
+        }
 
-		public async void ListItemTapped(object sender, ItemTappedEventArgs e)
-		{
-			Item item = (Item)e.Item;
-			await DisplayAlert("Tapped", item.Title.ToString() + " was selected.", "OK");
-			((ListView)sender).SelectedItem = null;
-		}
+        public async void ListItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Item item = (Item)e.Item;
+            await DisplayAlert("Tapped", item.Title.ToString() + " was selected.", "OK");
+            ((ListView)sender).SelectedItem = null;
+        }
 
-	}
+    }
 }
 

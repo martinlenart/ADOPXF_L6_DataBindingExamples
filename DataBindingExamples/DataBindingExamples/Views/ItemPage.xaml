@@ -6,8 +6,13 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<Entry HorizontalOptions="FillAndExpand" Text="{Binding Title}" />
-			<Button Text="Display Item Value" FontSize="Large" HorizontalOptions="Center" 
+            <Label Text="{Binding Description}"/>
+            
+            <Button Text="Display Item Value" FontSize="Large" HorizontalOptions="Center" 
                     VerticalOptions="Fill" Clicked="ButtonClicked" />
-		</StackLayout>
+            <Button Text="Display Item Value" FontSize="Large" HorizontalOptions="Center" 
+                    VerticalOptions="Fill" Clicked="Button_Clicked" />
+
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
