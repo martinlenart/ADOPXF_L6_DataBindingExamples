@@ -16,6 +16,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\NonTrivialBinding5.xaml.cs">
+      <DependentUpon>NonTrivialBinding5.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NonTrivialBinding2.xaml.cs">
+      <DependentUpon>NonTrivialBinding2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NonTrivialBinding4.xaml.cs">
+      <DependentUpon>NonTrivialBinding4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NonTrivialBinding3.xaml.cs">
+      <DependentUpon>NonTrivialBinding3.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\TrivialBinding.xaml.cs">
       <DependentUpon>TrivialBinding.xaml</DependentUpon>
     </Compile>
@@ -28,16 +40,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\NonTrivialBinding2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NonTrivialBinding4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NonTrivialBinding3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\NonTrivialBinding1.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TrivialBinding.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ItemPageUsingItemBindable.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ItemPageUsingTitleViewModel.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ListObservablePage.xaml">
@@ -49,7 +64,7 @@
     <EmbeddedResource Update="Views\ListPropertiesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ListViewPage.xaml">
+    <EmbeddedResource Update="Views\NonTrivialBinding5.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">

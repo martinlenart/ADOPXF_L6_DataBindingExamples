@@ -6,15 +6,16 @@ using Xamarin.Forms;
 
 namespace DataBindingExamples.Views
 {
-    public partial class NonTrivialBinding1 : ContentPage
+    public partial class NonTrivialBinding3 : ContentPage
     {
-        ItemA item;
+        ItemC item;
         Random rnd;
 
-        public NonTrivialBinding1()
+        public NonTrivialBinding3()
         {
             InitializeComponent();
-            item = new ItemA { Message = "A message from item", Creation = DateTime.Now};
+            
+            item = new ItemC();
             rnd = new Random();
 
             this.BindingContext = item;
@@ -30,12 +31,6 @@ namespace DataBindingExamples.Views
             item.Message = $"A message set in C# code with a random number: {rnd.Next(1000)}";
             item.Creation = item.Creation + new TimeSpan(10, 10, 10, 0); // add 10 days, 10 hours, 10 minutes 
         }
-    }
-
-    public class ItemA
-    {
-        public string Message { get; set; }
-        public DateTime Creation { get; set; }
     }
 }
 

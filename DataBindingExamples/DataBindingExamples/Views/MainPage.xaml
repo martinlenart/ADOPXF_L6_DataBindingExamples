@@ -14,10 +14,11 @@
 		<TableView.Root>
 			<TableSection Title="Select an example">
                 <TextCell Text="Trivial Data Binding" Tapped="navigateToPage" CommandParameter="{x:Type views:TrivialBinding}" />
-                <TextCell Text="NonTrivial Data Binding1" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding1}" />
-                <TextCell Text="Nontrivial Data Binding" Tapped="navigateToPage"  CommandParameter="{x:Type views:ItemPageUsingTitleViewModel}" />
-                <TextCell Text="Data Model Implementing INotifyPropertyChanged" Tapped="navigateToPage"  CommandParameter="{x:Type views:ItemPageUsingItemBindable}" />
-                <TextCell Text="Data Binding to a ListView" Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewPage}"  />
+                <TextCell Text="Non-Trivial Binding1 - Binding to an instance of your own C# class" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding1}" />
+                <TextCell Text="Non-Trivial Binding2 - Implementing INotifyChange" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding2}" />
+                <TextCell Text="Non-Trivial Binding3 - Implementing INotifyChange in BaseViewModel" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding3}" />
+                <TextCell Text="Non-Trivial Binding4 - Full ViewModel" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding4}" />
+                <TextCell Text="Non-Trivial Binding5 - Binding to ListView" Tapped="navigateToPage"  CommandParameter="{x:Type views:NonTrivialBinding5}"  />
                 <TextCell Text="Deleting Rows from a ListView" Tapped="navigateToPage"  CommandParameter="{x:Type views:ListObservablePage}"/>
                 <TextCell Text="Editing Properties in a ListView" Tapped="navigateToPage"  CommandParameter="{x:Type views:ListPropertiesPage}"/>
                 <TextCell Text="Editable ListView Bound to a View Model" Tapped="navigateToPage" CommandParameter="{x:Type views:ListPageUsingListViewModel}"/>
