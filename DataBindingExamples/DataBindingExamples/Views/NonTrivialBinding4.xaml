@@ -19,16 +19,13 @@
                             <RowDefinition Height="1*" />
                         </Grid.RowDefinitions>
                         <Entry x:Name="entry" Text="{Binding Path=Message}" Grid.Column="0" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
-                        <Label Text="{Binding Path=Message}" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="{Binding Message}" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
 
-                        <DatePicker x:Name="datePicked" Grid.Column="0" Date="{Binding Path=Creation.Date}" Grid.Row="1" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
-                        <Label Text="{Binding Path=Creation, StringFormat='{0:D}' }" Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand"/>
-
-                        <TimePicker x:Name="timePicked" Time="{Binding Path=Creation.TimeOfDay}" Grid.Column="0" Grid.Row="2" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
-                        <Label Text="{Binding Path=Creation, StringFormat='{0:T}' }" Grid.Column="1" Grid.Row="2" HorizontalOptions="StartAndExpand"/>
+                        <DatePicker x:Name="datePicked" Grid.Column="0" Date="{Binding Path=Creation}" Grid.Row="1" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
+                        <Label Text="{Binding Creation, StringFormat='{0:D}' }" Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand"/>
                     </Grid>
                     <Button Text="Checkout the properties of item, to which the UI elements are Bound" Clicked="ButtonClicked" />
-                    <Button Text="Change the properties of item in C# code" Command="{Binding Path=ChangeValueCommand}" CommandParameter ="Optional Command Parameter" />
+                    <Button Text="Change the properties of item in C# code" Command="{Binding ChangeValueCommand}" CommandParameter ="Optional Command Parameter" />
                 </StackLayout>
             </Frame>
         </StackLayout>

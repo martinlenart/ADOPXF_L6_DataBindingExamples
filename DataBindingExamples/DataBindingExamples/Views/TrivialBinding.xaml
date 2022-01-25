@@ -23,9 +23,6 @@
                         
                         <DatePicker x:Name="datePicked" Grid.Column="0" Grid.Row="1" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
                         <Label Text="{Binding Source={Reference datePicked}, Path=Date, StringFormat='{0:D}' }" Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand"/>
-                        
-                        <TimePicker x:Name="timePicked" Grid.Column="0" Grid.Row="2" HorizontalOptions="StartAndExpand" WidthRequest="400"/>
-                        <Label Text="{Binding Source={Reference timePicked}, Path=Time, StringFormat='{0:T}' }" Grid.Column="1" Grid.Row="2" HorizontalOptions="StartAndExpand"/>
                     </Grid>
                 </StackLayout>
             </Frame>

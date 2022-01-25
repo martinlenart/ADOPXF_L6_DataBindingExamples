@@ -13,9 +13,7 @@ namespace DataBindingExamples.Views
         public NonTrivialBinding4()
         {
             InitializeComponent();
-            item = new ItemD();
-
-            this.BindingContext = item;
+            this.BindingContext = new ItemD(); ;
         }
 
         public async void ButtonClicked(object sender, EventArgs args)
