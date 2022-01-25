@@ -13,7 +13,8 @@
 	<TableView Intent="Menu">
 		<TableView.Root>
 			<TableSection Title="Select an example">
-                <TextCell Text="Trivial Data Binding" Tapped="navigateToPage" CommandParameter="{x:Type views:ItemPage}" />
+                <TextCell Text="Trivial Data Binding" Tapped="navigateToPage" CommandParameter="{x:Type views:TrivialBinding}" />
+                <TextCell Text="NonTrivial Data Binding1" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding1}" />
                 <TextCell Text="Nontrivial Data Binding" Tapped="navigateToPage"  CommandParameter="{x:Type views:ItemPageUsingTitleViewModel}" />
                 <TextCell Text="Data Model Implementing INotifyPropertyChanged" Tapped="navigateToPage"  CommandParameter="{x:Type views:ItemPageUsingItemBindable}" />
                 <TextCell Text="Data Binding to a ListView" Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewPage}"  />
